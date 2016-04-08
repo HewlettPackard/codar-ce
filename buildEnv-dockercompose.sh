@@ -54,7 +54,7 @@ echo "The ipaddress is $ipaddress"
 if [ ! -z "$hostname" ] && [ "$hostname"!=" " ] && [ ! -z "$ipaddress" ] && [ "$ipaddress"!=" " ]; then
 
 echo "Download docker-compose.yml file"
-wget https://github-is-p.ghe.hos.hpecorp.net/raw/alex-william/cloud-orchestrate-csa/master/Codar1.6/docker-compose.yml  --no-check-certificate
+wget https://raw.githubusercontent.com/HewlettPackard/codar-ce/master/docker-compose.yml  --no-check-certificate
 echo "Changing the  hostname and ipaddress in the yml file"
 sed -i -e "s/vmhostname/${hostname}/" -e "s/vmipaddress/${ipaddress}/" docker-compose.yml
 echo "Starting to download all the required images and the containers will be created in the backgroud. This may take sevaral minutes."

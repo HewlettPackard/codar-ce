@@ -33,17 +33,6 @@ It contains 6000+ pre-created automated operations and workflows which can be le
 Codar 1.60
 ```
 
-#Why CSA/Codar on Docker?
-
-•  All the “Goodness” of Docker will be available for CSA too, like lightweight, reduce the application component dependencies, portability/supportability and help for quick deployment.
-
-•  Easy to use for  PoC or for demos.
-
-•  Adhere to latest technology as the customer shifting their platform to adopt Docker platform.
-
-•  Pre-baked application components will avoid the installation time and avoid any installation issue.
-
-
 #Prerequisites 
 1.	Set up Docker client with “docker-compose” as given in this  Docker site. [Ref.](https://docs.docker.com/engine/installation/linux/ubuntulinux/)
 2.	OS & System Requirements for Docker Client/Workstation
@@ -63,16 +52,16 @@ CPU : 4
 2.	Command to execute:
 (If you are not creating a folder under /tmp, please make sure there is no docker-compose.yml exists in the directory before you execute the curl command to stand up CSA/Codar"
 
-•	mkdir /tmp/codar
-•	cd /tmp/codar 
-•	curl -k -L https://github-is-p.ghe.hos.hpecorp.net/raw/alex-william/cloud-orchestrate-csa/master/Codar1.6/buildEnv-dockercompose.sh | bash /dev/stdin <hostname> <ipaddress>
+	•	mkdir /tmp/codar
+	•	cd /tmp/codar 
+	•	curl -k -L https://raw.githubusercontent.com/HewlettPackard/codar-ce/master/buildEnv-dockercompose.sh | bash /dev/stdin <hostname> <ipaddress>
  
   Please replace the arguments as per the below instruction,
   <hostname> is the Docker workstation/client hostname
   <ipaddress> is the Docker workstation/client ipaddress
 
   For example, the Curl command should be as below. The hostname and ipaddress are sample
-  curl -k -L https://github-is-p.ghe.hos.hpecorp.net/raw/alex-william/cloud-orchestrate-csa/master/Codar1.6/buildEnv-dockercompose.sh | bash /dev/stdin mydockerclient.mydomain.com 10.1.1.12
+  curl -k -L https://raw.githubusercontent.com/HewlettPackard/codar-ce/master/buildEnv-dockercompose.sh | bash /dev/stdin mydockerclient.mydomain.com 10.1.1.12
 
   Please always stop or start the containers using below commands,
   To stop: docker-compose stop
