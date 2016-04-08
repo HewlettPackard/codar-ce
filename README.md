@@ -6,7 +6,7 @@ HPE Codar CE contains components such as **Core Codar** running in a JBoss conta
 
 All these **three components** will be made available on **three Docker containers** and yet connected to each other to form a single portal service.
 
-#What is HPE Codar CE ?
+#Concepts
 HPE Codar is a **DevOps automation** tool primarily focuses on **release pipeline automation**. 
 
 This community edition of Codar helps the community users to automate deployment of complex application on a hybrid cloud environment and also it helps to automate **“Continuous Deployment and Continuous Delivery”** process. 
