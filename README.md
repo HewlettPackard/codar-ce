@@ -112,7 +112,7 @@ Please find the exposed ports from which you can access various portals of Codar
 	For Codar, please use silent_install_codar.xml, incase if you have installed Codar license
 
 #Known Issues
-For product known issues, please refer Codar 1.60 Release Notes [here].
+For product known issues, please refer Codar 1.60 Release Notes [here](https://github.com/HewlettPackard/codar-ce/raw/master/Codar_160_ReleaseNotes.pdf).
 
 #License
 View [license](https://github.com/HewlettPackard/codar-ce/blob/master/LICENSE) information for the software contained in this repo.
