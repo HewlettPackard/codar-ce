@@ -9,7 +9,7 @@ All these **three components** will be made available on **three Docker containe
 #Concepts
 HPE Codar is a **DevOps automation** tool primarily focuses on **release pipeline automation**. 
 
-This community edition of Codar helps the community users to automate deployment of complex application on a hybrid cloud environment and also it helps to automate **“Continuous Deployment and Continuous Delivery”** process. 
+This community edition of Codar helps the community users to automate deployment of complex application on a hybrid cloud environment and also it helps to **automate “Continuous Deployment and Continuous Delivery”** process. 
 
 •	Automation includes **infrastructure** provisioning, **platform software** installation or configuration, **deployment of application** on complex environment like load balancer etc. 
 
