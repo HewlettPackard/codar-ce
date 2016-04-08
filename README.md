@@ -44,7 +44,7 @@ This community edition of Codar helps the community users to automate deployment
 
 
 
-#HPE Codar CE trial license limitions
+#HPE Codar CE trial license limitations
 1.	30 days of trial period with unlimited deployment on any number of OSI
 2.	Post trail period only 5 OSI can be used
 
