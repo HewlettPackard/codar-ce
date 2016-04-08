@@ -90,10 +90,10 @@ Please find the exposed ports from which you can access various portals of Codar
 #Documents
 1.	[Concepts Guide](https://github.com/HewlettPackard/codar-ce/raw/master/Docs/Codar_1.6_ConceptsGuide.pdf)
 2.	[Help Guide](https://github.com/HewlettPackard/codar-ce/raw/master/Docs/Codar_160_Help.pdf)
-3.	[Configuration Guide](https://github.com/HewlettPackard/codar-ce/raw/master/Codar_160_ConfigurationGuide.pdf)
-4.	[API Reference Guide](https://github.com/HewlettPackard/codar-ce/raw/master/Codar_160_API_ReferenceGuide.pdf)
-5.	[QuickStart Guide](https://github.com/HewlettPackard/codar-ce/raw/master/Codar_1.6_QuickStartGuide.pdf)
-6.	[3rd Party License Guide](https://github.com/HewlettPackard/codar-ce/raw/master/Codar_160_OS-3rdPty-License.pdf)
+3.	[Configuration Guide](https://github.com/HewlettPackard/codar-ce/raw/master/Docs/Codar_160_ConfigurationGuide.pdf)
+4.	[API Reference Guide](https://github.com/HewlettPackard/codar-ce/raw/master/Docs/Codar_160_API_ReferenceGuide.pdf)
+5.	[QuickStart Guide](https://github.com/HewlettPackard/codar-ce/raw/master/Docs/Codar_1.6_QuickStartGuide.pdf)
+6.	[3rd Party License Guide](https://github.com/HewlettPackard/codar-ce/raw/master/Docs/Codar_160_OS-3rdPty-License.pdf)
 
 
 #Important notes
@@ -112,7 +112,7 @@ Please find the exposed ports from which you can access various portals of Codar
 	For Codar, please use silent_install_codar.xml, incase if you have installed Codar license
 
 #Known Issues
-For product known issues, please refer Codar 1.60 Release Notes [here](https://github.com/HewlettPackard/codar-ce/raw/master/Codar_160_ReleaseNotes.pdf).
+For product known issues, please refer Codar 1.60 Release Notes [here](https://github.com/HewlettPackard/codar-ce/raw/master/Docs/Codar_160_ReleaseNotes.pdf).
 
 #License
 View [license](https://github.com/HewlettPackard/codar-ce/blob/master/LICENSE) information for the software contained in this repo.
