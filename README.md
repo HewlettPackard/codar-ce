@@ -22,13 +22,13 @@ This community edition of Codar helps the community users to automate deployment
 
 •	**Ease of automation**. Supports HPE OO CE which is  the native automation tool which helps the end user to automate any complex steps. It contains 6000+ pre-created automated operations and workflows which can be		leveraged to automate the installation of software and deployment application from day1. 
 
-•	**Integration with third party products** like vCenter, AWS, OpenStack, Docker, Chef, Puppet, Mesosphere etc. SDK to integrate with home grown products or any third party products
+•	**Integration with third party products** like **vCenter, AWS, OpenStack, Docker, Chef, Puppet and Mesosphere** etc. SDK to integrate with home grown products or any third party products
 
-•	**20+ integration with HP Software products**
+•	**20+ integration with HP Software products like HPE Sitescope, HPE Application Lifecycle Management HPE Helion Development Platform, HPE Stackato, HPE Oneview etc.**
 
-•	Build **Cloud agnostic blueprints** to deploy the application across different cloud vendor
+•	Build **Cloud Agnostic blueprints** to deploy the application across different cloud vendor
 
-•	Build **Cloud native blueprints** to make the application components deployed as “micro-services”
+•	Build **Cloud Native blueprints** to make the application components deployed as “micro-services”
 
 •	Supports **northbound interface**
 
