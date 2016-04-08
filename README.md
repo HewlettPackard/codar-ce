@@ -1,21 +1,21 @@
 #About this repo
 
-This repo contains scripts to stand up HPE Codar Community Edition (HPE Codar CE) on Docker containers. 
+This repo contains **scripts** to stand up **HPE Codar Community Edition (HPE Codar CE) on Docker containers**. 
 
-HPE Codar CE contains components such as Core Codar running in a JBoss container, HPE Operation Orchestration Community Edition (HP OO CE) Central Server running on a Tomcat server and Codar, HP OO and IDM databases created using PostgreSQL Server. 
+HPE Codar CE contains components such as **Core Codar** running in a JBoss container, **HPE Operation Orchestration Community Edition (HP OO CE) Central Server** running on a Tomcat server and Codar, HP OO and IDM **databases created using PostgreSQL Server**. 
 
-All these three components will be made available on a Docker container and yet connected to each other to form a single portal service.
+All these **three components** will be made available on **three Docker containers** and yet connected to each other to form a single portal service.
 
 #What is HPE Codar CE ?
 HPE Codar is a DevOps automation tool primarily focuses on release pipeline automation. 
 
 This community edition of Codar helps the community users to automate deployment of complex application on a hybrid cloud environment and also it helps to automate “Continuous Deployment and Continuous Delivery” process. 
 
-•	Automation includes infrastructure provisioning, platform software installation or configuration, deployment of application on complex environment like load balancer etc. 
+•	Automation includes **infrastructure** provisioning, **platform software** installation or configuration, **deployment of application** on complex environment like load balancer etc. 
 
-•	Automate the end-to-end steps of your applications deployment by integrating with various resource providers like VMWare vCenter, AWS, OpenStack, Docker etc. and import the intelligence from HP OO, Chef, Puppet, HP		SA etc. to install or configure software and deploy application. 
+•	Automate the end-to-end steps of your applications deployment by integrating with various **resource providers** like **VMWare vCenter, AWS, OpenStack, Docker etc. and import the intelligence from HP OO, Chef,		Puppet and HP SA** etc. to install or configure software and deploy application. 
 
-•	Allows to create blueprints/designs using rich graphical designer (drag & drop), trigger deployments using native UI or auto-deploy using CI tool like Jenkins, Bamboo etc. which helps for Continuous Deployment.
+•	Allows to create **blueprints/designs** using **rich graphical designer (drag & drop)**, trigger deployments using native UI or auto-deploy using **CI tool like Jenkins, Bamboo** etc. which helps for **Continuous		Deployment**.
 
 
 #Advantages you get when using HPE Codar CE
@@ -24,7 +24,7 @@ This community edition of Codar helps the community users to automate deployment
 
 •	**Integration with third party products** like vCenter, AWS, OpenStack, Docker, Chef, Puppet, Mesosphere etc. SDK to integrate with home grown products or any third party products
 
-•	20+ integration with HP Software products
+•	**20+ integration with HP Software products**
 
 •	Build **Cloud agnostic blueprints** to deploy the application across different cloud vendor
 
@@ -34,18 +34,19 @@ This community edition of Codar helps the community users to automate deployment
 
 •	Complete **release gating automation** with **built-in approval mechanism**
 
-•	In-built versioning system for application blue-prints and components
+•	**In-built versioning system** for application blue-prints and components
 
 •	Heavy lifting is already done by the proven software **HP OO which acts as a central engine**
 
-•	Authentication & Authorization supports CAC, SSO, LDAP etc.
+•	**Authentication & Authorization** supports CAC, SSO, LDAP etc.
+
+•	**RBAC** support
 
 
 
-#Limitations of HPE Codar CE
+#HPE Codar CE trial license limitions
 1.	30 days of trial period with unlimited deployment on any number of OSI
 2.	Post trail period only 5 OSI can be used
-3.	HP Operations Orchestration has the limitation on # of executions
 
 #Codar version supported
 ```
