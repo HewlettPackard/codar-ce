@@ -34,7 +34,7 @@ Codar 1.60
 ```
 
 #Prerequisites 
-1.	Set up Docker client with “docker-compose” as given in this  Docker site. [Ref.](https://docs.docker.com/engine/installation/linux/ubuntulinux/)
+1.	Set up Docker client with “docker-compose” as given in this  Docker site. [Reference Site](https://docs.docker.com/engine/installation/linux/ubuntulinux/)
 2.	OS & System Requirements for Docker Client/Workstation
 ```
 OS  : Ubuntu 12.x and above
@@ -49,32 +49,25 @@ CPU : 4
 
 1.	Login to the registry docker.io with your username, password and email 
 	Command to execute: docker login docker.io
+
 2.	Command to execute:
 (If you are not creating a folder under /tmp, please make sure there is no docker-compose.yml exists in the directory before you execute the curl command to stand up CSA/Codar"
 
 	•	mkdir /tmp/codar
 	•	cd /tmp/codar 
-	•	curl -k -L https://raw.githubusercontent.com/HewlettPackard/codar-ce/master/buildEnv-dockercompose.sh | bash /dev/stdin <hostname> <ipaddress>
+	•	curl -k -L https://github.com/HewlettPackard/codar-ce/raw/master/buildEnv-dockercompose.sh | bash /dev/stdin <hostname> <ipaddress>
  
   Please replace the arguments as per the below instruction,
   <hostname> is the Docker workstation/client hostname
   <ipaddress> is the Docker workstation/client ipaddress
 
   For example, the Curl command should be as below. The hostname and ipaddress are sample
-  curl -k -L https://raw.githubusercontent.com/HewlettPackard/codar-ce/master/buildEnv-dockercompose.sh | bash /dev/stdin mydockerclient.mydomain.com 10.1.1.12
+  curl -k -L https://github.com/HewlettPackard/codar-ce/raw/master/buildEnv-dockercompose.sh | bash /dev/stdin mydockerclient.mydomain.com 10.1.1.12
 
   Please always stop or start the containers using below commands,
   To stop: docker-compose stop
   To start: docker-compose up --no-recreate -d
   (Kindly note that docker-compose start is currently not supported)
-```
-
-Scripts/Files
-
-```
-	https://github-is-p.ghe.hos.hpecorp.net/raw/alex-william/cloud-orchestrate-csa/master/Codar1.6/buildEnv-dockercompose.sh
-	https://github-is-p.ghe.hos.hpecorp.net/raw/alex-william/cloud-orchestrate-csa/master/Codar1.6/docker-compose.yml
-
 ```
 
 #Codar Endpoints
@@ -93,6 +86,16 @@ Please find the exposed ports from which you can access various portals of Codar
 	Password: cloud	
 ```
 
+
+#Documents
+1.	[Concepts Guide](https://github.com/HewlettPackard/codar-ce/raw/master/Docs/Codar_1.6_ConceptsGuide.pdf)
+2.	[Help Guide](https://github.com/HewlettPackard/codar-ce/raw/master/Docs/Codar_160_Help.pdf)
+3.	[Configuration Guide](https://github.com/HewlettPackard/codar-ce/raw/master/Codar_160_ConfigurationGuide.pdf)
+4.	[API Reference Guide](https://github.com/HewlettPackard/codar-ce/raw/master/Codar_160_API_ReferenceGuide.pdf)
+5.	[QuickStart Guide](https://github.com/HewlettPackard/codar-ce/raw/master/Codar_1.6_QuickStartGuide.pdf)
+6.	[3rd Party License Guide](https://github.com/HewlettPackard/codar-ce/raw/master/Codar_160_OS-3rdPty-License.pdf)
+
+
 #Important notes
 
 • Please read through the Codar install and configure guide for post installation steps. For example, do remember to change in the OO Central server, 
@@ -104,12 +107,12 @@ Please find the exposed ports from which you can access various portals of Codar
 
 • The scripts which helps for configuring the Codar will be available at the /tmp location of all the containers (please reach out to us for any enhancement on these scripts).
 
-• Any capsule content upload which is new can be done within Docker CSA container and no extra configurations are required. The content zip file location should be mentioned in the
+• Any capsule content upload which is new can be done within Docker Codar container and no extra configurations are required. The content zip file location should be mentioned in the
 	/usr/local/hp/csa/Tools/CSLContentInstaller/silent_install.xml. 
 	For Codar, please use silent_install_codar.xml, incase if you have installed Codar license
 
 #Known Issues
-For product known issues, please refer Codar 01.60 Release Notes
+For product known issues, please refer Codar 1.60 Release Notes [here].
 
 #License
 View [license](https://github.com/HewlettPackard/codar-ce/blob/master/LICENSE) information for the software contained in this repo.
