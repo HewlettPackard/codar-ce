@@ -1,15 +1,19 @@
 #About this repo
 
-This repo contains scripts to stand up HPE Codar Community Edition (HPE Codar CE) on Docker containers. HPE Codar CE contains components such as Core Codar running in a JBoss container, HPE Operation Orchestration Community Edition (HP OO CE) Central Server running on a Tomcat server and Codar, HP OO and IDM databases created using PostgreSQL Server. All these three components will be made available on a Docker container using this script and yet connected to each other to form a single portal service of release automation.
+This repo contains scripts to stand up HPE Codar Community Edition (HPE Codar CE) on Docker containers. 
+HPE Codar CE contains components such as Core Codar running in a JBoss container, HPE Operation Orchestration Community Edition (HP OO CE) Central Server running on a Tomcat server and Codar, HP OO and IDM databases created using PostgreSQL Server. 
+All these three components will be made available on a Docker container and yet connected to each other to form a single portal service.
 
 #What is HPE Codar CE?
-HPE Codar is a DevOps automation tool primarily focuses on release pipeline automation. This community edition of Codar helps the community users to automate deployment of complex application on a hybrid cloud environment and also it helps to automate “Continuous Deployment and Continuous Delivery” process. 
-•	Automation includes infrastructure provisioning, platform software installation or configuration, deployment of application on complex environment like load balancer etc. 
-•	Automate the end-to-end steps of your applications deployment by integrating with various resource providers like VMWare vCenter, AWS, OpenStack, Docker etc. and import the intelligence from HP OO, Chef, Puppet, HP		SA etc. to install or configure software and deploy application. 
-•	Allows to create blueprints/designs using rich graphical designer (drag & drop), trigger deployments using native UI or auto-deploy using CI tool like Jenkins, Bamboo etc. which helps for Continuous Deployment.
+HPE Codar is a DevOps automation tool primarily focuses on release pipeline automation. 
+This community edition of Codar helps the community users to automate deployment of complex application on a hybrid cloud environment and also it helps to automate “Continuous Deployment and Continuous Delivery” process. 
+•	#Automation includes infrastructure provisioning, platform software installation or configuration, deployment of application on complex environment like load balancer etc. 
+•	#Automate the end-to-end steps of your applications deployment by integrating with various resource providers like VMWare vCenter, AWS, OpenStack, Docker etc. and import the intelligence from HP OO, Chef, Puppet, HP SA etc. to install or configure software and deploy application. 
+•	#Allows to create blueprints/designs using rich graphical designer (drag & drop), trigger deployments using native UI or auto-deploy using CI tool like Jenkins, Bamboo etc. which helps for Continuous Deployment.
 
 #What is HPE OO CE (HP OO CE)?
-HPE OO CE is a workflow automation tool which helps the end user to automate any complex steps. It contains 6000+ pre-created automated operations and workflows which can be leveraged to automate the installation of software and deployment application from day1. 
+HPE OO CE is a workflow automation tool which helps the end user to automate any complex steps.
+It contains 6000+ pre-created automated operations and workflows which can be leveraged to automate the installation of software and deployment application from day1. 
 
 #Limitations of HPE Codar CE
 1.	30 days of trial period with unlimited deployment on any number of OSI
@@ -33,7 +37,7 @@ Codar 1.60
 
 
 #Prerequisites 
-1.	Set up Docker client with “docker-compose” as given in this  Docker site. [Link](https://rndwiki.corp.hpecorp.net/confluence/display/rndapps/HP+Docker+Registry+for+HPE)
+1.	Set up Docker client with “docker-compose” as given in this  Docker site. [Ref.](https://docs.docker.com/engine/installation/linux/ubuntulinux/)
 2.	OS & System Requirements for Docker Client/Workstation
 ```
 OS  : Ubuntu 12.x and above
@@ -111,7 +115,7 @@ Please find the exposed ports from which you can access various portals of Codar
 For product known issues, please refer Codar 01.60 Release Notes
 
 #License
-View [license](https://github-is-p.ghe.hos.hpecorp.net/alex-william/cloud-orchestrate-csa/blob/master/LICENSE) information for the software contained in this repo.
+View [license](https://github.com/HewlettPackard/codar-ce/blob/master/LICENSE) information for the software contained in this repo.
 
 #Issues
-If you have any problems with or questions about the software contained in this repo, please write us to tech-ambassadors-capu@hpe.com or [GitHub issue](https://github-is-p.ghe.hos.hpecorp.net/alex-william/cloud-orchestrate-csa/issues).
+If you have any problems with or questions about the software contained in this repo, please write us to tech-ambassadors-capu@hpe.com or [GitHub issue](https://github.com/HewlettPackard/codar-ce/issues).
