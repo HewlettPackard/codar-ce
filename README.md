@@ -17,11 +17,30 @@ This community edition of Codar helps the community users to automate deployment
 
 •	Allows to create blueprints/designs using rich graphical designer (drag & drop), trigger deployments using native UI or auto-deploy using CI tool like Jenkins, Bamboo etc. which helps for Continuous Deployment.
 
-#Native Automation Tool
 
-•	HPE OO CE is a workflow automation tool which helps the end user to automate any complex steps.
+#Advantages you get when using HPE Codar CE
 
-•	It contains 6000+ pre-created automated operations and workflows which can be leveraged to automate the installation of software and deployment application from day1. 
+•	**Ease of automation**. Supports HPE OO CE which is  the native automation tool which helps the end user to automate any complex steps. It contains 6000+ pre-created automated operations and workflows which can be		leveraged to automate the installation of software and deployment application from day1. 
+
+•	**Integration with third party products** like vCenter, AWS, OpenStack, Docker, Chef, Puppet, Mesosphere etc. SDK to integrate with home grown products or any third party products
+
+•	20+ integration with HP Software products
+
+•	Build **Cloud agnostic blueprints** to deploy the application across different cloud vendor
+
+•	Build **Cloud native blueprints** to make the application components deployed as “micro-services”
+
+•	Supports **northbound interface**
+
+•	Complete **release gating automation** with **built-in approval mechanism**
+
+•	In-built versioning system for application blue-prints and components
+
+•	Heavy lifting is already done by the proven software **HP OO which acts as a central engine**
+
+•	Authentication & Authorization supports CAC, SSO, LDAP etc.
+
+
 
 #Limitations of HPE Codar CE
 1.	30 days of trial period with unlimited deployment on any number of OSI
