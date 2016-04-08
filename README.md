@@ -17,11 +17,11 @@ This community edition of Codar helps the community users to automate deployment
 
 •	Allows to create blueprints/designs using rich graphical designer (drag & drop), trigger deployments using native UI or auto-deploy using CI tool like Jenkins, Bamboo etc. which helps for Continuous Deployment.
 
-#What is HPE OO CE ?
+#Native Automation Tool
 
-HPE OO CE is a workflow automation tool which helps the end user to automate any complex steps.
+•	HPE OO CE is a workflow automation tool which helps the end user to automate any complex steps.
 
-It contains 6000+ pre-created automated operations and workflows which can be leveraged to automate the installation of software and deployment application from day1. 
+•	It contains 6000+ pre-created automated operations and workflows which can be leveraged to automate the installation of software and deployment application from day1. 
 
 #Limitations of HPE Codar CE
 1.	30 days of trial period with unlimited deployment on any number of OSI
