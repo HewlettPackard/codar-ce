@@ -6,17 +6,18 @@ HPE Codar CE contains components such as Core Codar running in a JBoss container
 
 All these three components will be made available on a Docker container and yet connected to each other to form a single portal service.
 
-#What is HPE Codar CE?
+#What is HPE Codar CE ?
 HPE Codar is a DevOps automation tool primarily focuses on release pipeline automation. 
 
 This community edition of Codar helps the community users to automate deployment of complex application on a hybrid cloud environment and also it helps to automate “Continuous Deployment and Continuous Delivery” process. 
+
 •	Automation includes infrastructure provisioning, platform software installation or configuration, deployment of application on complex environment like load balancer etc. 
 
 •	Automate the end-to-end steps of your applications deployment by integrating with various resource providers like VMWare vCenter, AWS, OpenStack, Docker etc. and import the intelligence from HP OO, Chef, Puppet, HP		SA etc. to install or configure software and deploy application. 
 
 •	Allows to create blueprints/designs using rich graphical designer (drag & drop), trigger deployments using native UI or auto-deploy using CI tool like Jenkins, Bamboo etc. which helps for Continuous Deployment.
 
-#What is HPE OO CE (HP OO CE)?
+#What is HPE OO CE ?
 
 HPE OO CE is a workflow automation tool which helps the end user to automate any complex steps.
 
