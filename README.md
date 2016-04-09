@@ -95,17 +95,17 @@ Please find the exposed ports from which you can access various portals of Codar
 ```
 	Codar Management Console - https://<dockerworkstaions_ip>:18444/csa
 
-	Credentials 	
+	Default Credentials 	
 	Username: admin
 	Password: cloud
 
 	Operations Orchestration Central - https://<dockerworkstaions_ip>:18445/oo
 	
-	Credentials 
+	Default Credentials 
 	Username: admin
 	Password: cloud	
 ```
-
+Important Note : Please change the password after HPE Codar CE & HP OO CE are up and running
 
 #Documents
 1.	[Concepts Guide](https://github.com/HewlettPackard/codar-ce/raw/master/Docs/Codar_1.6_ConceptsGuide.pdf)
