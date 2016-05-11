@@ -133,11 +133,9 @@ Important Note : Please change the password after HPE Codar CE & HP OO CE are up
 	/usr/local/hp/csa/Tools/CSLContentInstaller/silent_install.xml. 
 	For Codar, please use silent_install_codar.xml, incase if you have installed Codar license
 
-• Use the attached docker-compose.yml.codar16-patch1 (remove .codar16-patch1)  file to download latest Docker image for Codar which contains the Codar 1.6 patch1.
+#Jenkins Docker custom container configuration  
+ Use  “docker-compose.yml.jenkins” (remove .jenkins extension) to download Jenkins pre-configured with PetClinic sample app. 
 
-• Use  “docker-compose.yml.jenkins” (remove .jenkins extension) to download Jenkins pre-configured with PetClinic sample app. 
-
-#Jenkins Docker custom container configuration instructions 
 	1. Please modify the proxy information from /opt/apache-maven-2.2.1/conf/settings.xml inside the Jenkins Docker container and update proxy under Jenkins --> Manage Plugins --> Advanced --> Proxy Configuration
 
 	2. Codar “cacerts” will be available once the Codar Docker containers are up and running. After you trigger the docker-compose.yml.jenkins (remove .jenkins extension) “cacerts” will be copied to “/share/cacerts” 
