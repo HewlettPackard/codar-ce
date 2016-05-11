@@ -6,7 +6,7 @@ commondb:
     - "15432:5432"
   command: "/bin/bash -c \"service postgresql start;  tail -f /dev/null\""
 codar:
-  image: hpsoftware/codar:codar16
+  image: hpsoftware/codar:latest
   volumes:
     - "/src/share:/share"
   ports:
