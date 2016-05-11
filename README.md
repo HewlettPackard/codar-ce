@@ -119,8 +119,11 @@ Important Note : Please change the password after HPE Codar CE & HP OO CE are up
 #Important notes
 
 • Please read through the Codar install and configure guide for post installation steps. 
+
   Important for Jenking-Codar integration
+
 	1. Launch  HP OO Central portal (https://<dockerworkstaions_ip>:18445/oo)   --> content Management  -->  System Accounts --> CODAR_REST_CREDENTIALS --> provide “admin” as username and “cloud” password
+
 	2. Go to HP OO (https://<dockerworkstaions_ip>:18445/oo) --> content Management  --> System Properties --> CODAR_REST_API --> Replace localhost:8444 with  “<<Dockerhost>>:18444” value  
 
 • HPSSO/LWSSO is not enabled. Please refer the help guide to configure HPSSO/LWSSO. Please note that, "ipaddress" is used to configure CSA/Codar
