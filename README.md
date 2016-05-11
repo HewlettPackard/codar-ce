@@ -50,7 +50,7 @@ This community edition of Codar helps the community users to automate deployment
 
 #Codar version supported
 ```
-Codar 1.60
+Codar 1.60 with Patch 1
 ```
 
 #Prerequisites 
@@ -118,8 +118,7 @@ Important Note : Please change the password after HPE Codar CE & HP OO CE are up
 
 #Important notes
 
-• Please read through the Codar install and configure guide for post installation steps. For example, do remember to change in the OO Central server, 
-	Content Management --> Configuration Items --> System Properties --> CSA_REST_URI
+• Please read through the Codar install and configure guide for post installation steps. 
 
 • HPSSO/LWSSO is not enabled. Please refer the help guide to configure HPSSO/LWSSO. Please note that, "ipaddress" is used to configure CSA/Codar
 
@@ -130,6 +129,27 @@ Important Note : Please change the password after HPE Codar CE & HP OO CE are up
 • Any capsule content upload which is new can be done within Docker Codar container and no extra configurations are required. The content zip file location should be mentioned in the
 	/usr/local/hp/csa/Tools/CSLContentInstaller/silent_install.xml. 
 	For Codar, please use silent_install_codar.xml, incase if you have installed Codar license
+
+• Use the attached docker-compose.yml.codar16-patch1 (remove .codar16-patch1)  file to download latest Docker image for Codar which contains the Codar 1.6 patch1.
+
+• Use  “docker-compose.yml.jenkins” (remove .jenkins extension) to download Jenkins pre-configured with PetClinic sample app. 
+
+• Instructions to be followed in order to use the Jenkins Docker image
+	1. Please modify the proxy information from /opt/apache-maven-2.2.1/conf/settings.xml inside the Jenkins Docker container and update proxy under Jenkins --> Manage Plugins --> Advanced --> Proxy Configuration
+	2. Codar “cacerts” will be available once the Codar Docker containers are up and running. After you trigger the docker-compose.yml.jenkins (remove .jenkins extension) “cacerts” will be copied to “/share/cacerts” using Docker volume
+	3. You can configure this cacerts location in the Jenkins-Codar plugin
+	4. Go to Manage Jenkins Configure System Jenkins URL http://<<DOCKERHOST>>:18080/ and update the Docker host URL
+	5. For any Jenkins error, please check /var/log/Jenkins/ jenkins.log
+
+• To check out the SVN repo and you can use the same checked out directory to check-in designs. There is a “designs” folder which exists within this folder.
+	http://<<DOCKERHOST:18081>>/svn/petclinic/branches/petclinic-sourcecode-1.60.0000 
+	USERNAME  : admin
+	PASSWORD  : admin
+
+• Instructions to be followed in order to make HP OO process the Jenkins request
+	1. Launch  HP OO Central portal (https://<dockerworkstaions_ip>:18445/oo)   --> content Management  -->  System Accounts --> CODAR_REST_CREDENTIALS --> provide “admin” as username and “cloud” password
+	2. Go to HP OO (https://<dockerworkstaions_ip>:18445/oo) --> content Management  --> System Properties --> CODAR_REST_API --> Replace localhost:8444 with  “<<Dockerhost>>:18444” value  
+
 
 #Known Issues
 For product known issues, please refer Codar 1.60 Release Notes [here](https://github.com/HewlettPackard/codar-ce/raw/master/Docs/Codar_160_ReleaseNotes.pdf).
