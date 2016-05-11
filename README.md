@@ -119,6 +119,9 @@ Important Note : Please change the password after HPE Codar CE & HP OO CE are up
 #Important notes
 
 • Please read through the Codar install and configure guide for post installation steps. 
+  Important for Jenking-Codar integration
+	1. Launch  HP OO Central portal (https://<dockerworkstaions_ip>:18445/oo)   --> content Management  -->  System Accounts --> CODAR_REST_CREDENTIALS --> provide “admin” as username and “cloud” password
+	2. Go to HP OO (https://<dockerworkstaions_ip>:18445/oo) --> content Management  --> System Properties --> CODAR_REST_API --> Replace localhost:8444 with  “<<Dockerhost>>:18444” value  
 
 • HPSSO/LWSSO is not enabled. Please refer the help guide to configure HPSSO/LWSSO. Please note that, "ipaddress" is used to configure CSA/Codar
 
@@ -134,21 +137,25 @@ Important Note : Please change the password after HPE Codar CE & HP OO CE are up
 
 • Use  “docker-compose.yml.jenkins” (remove .jenkins extension) to download Jenkins pre-configured with PetClinic sample app. 
 
-• Instructions to be followed in order to use the Jenkins Docker image
+#Jenkins Docker custom container configuration instructions 
 	1. Please modify the proxy information from /opt/apache-maven-2.2.1/conf/settings.xml inside the Jenkins Docker container and update proxy under Jenkins --> Manage Plugins --> Advanced --> Proxy Configuration
-	2. Codar “cacerts” will be available once the Codar Docker containers are up and running. After you trigger the docker-compose.yml.jenkins (remove .jenkins extension) “cacerts” will be copied to “/share/cacerts” using Docker volume
+
+	2. Codar “cacerts” will be available once the Codar Docker containers are up and running. After you trigger the docker-compose.yml.jenkins (remove .jenkins extension) “cacerts” will be copied to “/share/cacerts” 
+	using Docker volume
+
 	3. You can configure this cacerts location in the Jenkins-Codar plugin
+
 	4. Go to Manage Jenkins Configure System Jenkins URL http://<<DOCKERHOST>>:18080/ and update the Docker host URL
+
 	5. For any Jenkins error, please check /var/log/Jenkins/ jenkins.log
 
-• To check out the SVN repo and you can use the same checked out directory to check-in designs. There is a “designs” folder which exists within this folder.
+# SVN Info
+To check out the SVN repo and you can use the same checked out directory to check-in designs. There is a “designs” folder which exists within this folder.
 	http://<<DOCKERHOST:18081>>/svn/petclinic/branches/petclinic-sourcecode-1.60.0000 
-	USERNAME  : admin
-	PASSWORD  : admin
 
-• Instructions to be followed in order to make HP OO process the Jenkins request
-	1. Launch  HP OO Central portal (https://<dockerworkstaions_ip>:18445/oo)   --> content Management  -->  System Accounts --> CODAR_REST_CREDENTIALS --> provide “admin” as username and “cloud” password
-	2. Go to HP OO (https://<dockerworkstaions_ip>:18445/oo) --> content Management  --> System Properties --> CODAR_REST_API --> Replace localhost:8444 with  “<<Dockerhost>>:18444” value  
+	USERNAME  : admin
+
+	PASSWORD  : admin
 
 
 #Known Issues
