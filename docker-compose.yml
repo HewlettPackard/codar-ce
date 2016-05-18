@@ -23,7 +23,7 @@ oo:
   volumes:
     - "/src/share:/share"
   ports:
-    - "18445:8445"
+    - "18445:8443"
   links:
     - "commondb:commondb"
   command: "/bin/bash -c  \"sleep 60; /tmp/ooconfig.sh; tail -f /dev/null\""
