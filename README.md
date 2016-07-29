@@ -169,7 +169,7 @@ To check out the SVN repo and you can use the same checked out directory to chec
 
 
 #Known Issues
-For product known issues, please refer Codar 1.60 Release Notes [here](https://github.com/HewlettPackard/codar-ce/raw/master/Docs/Codar_1.70_Release_Notes.pdf).
+For product known issues, please refer Codar 1.70 Release Notes [here](https://github.com/HewlettPackard/codar-ce/raw/master/Docs/Codar_1.70_Release_Notes.pdf).
 
 #License
 View [license](https://github.com/HewlettPackard/codar-ce/blob/master/LICENSE) information for the software contained in this repo.
