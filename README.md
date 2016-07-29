@@ -142,7 +142,9 @@ Important Note : Please change the password after HPE Codar CE & HP OO CE are up
 • The scripts which helps for configuring the Codar will be available at the /tmp location of all the containers (please reach out to us for any enhancement on these scripts).
 
 • Any capsule content upload which is new can be done within Docker Codar container and no extra configurations are required. The content zip file location should be mentioned in the
-	/usr/local/hp/csa/Tools/CSLContentInstaller/silent_install.xml. 
+
+	/usr/local/hp/codar/Tools/CSLContentInstaller/silent_install.xml. 
+
 	For Codar, please use silent_install_codar.xml, incase if you have installed Codar license
 
 #Jenkins Docker custom container configuration  
@@ -169,7 +171,7 @@ To check out the SVN repo and you can use the same checked out directory to chec
 
 
 #Known Issues
-For product known issues, please refer Codar 1.60 Release Notes [here](https://github.com/HewlettPackard/codar-ce/raw/master/Docs/Codar_1.70_Release_Notes.pdf).
+For product known issues, please refer Codar 1.70 Release Notes [here](https://github.com/HewlettPackard/codar-ce/raw/master/Docs/Codar_1.70_Release_Notes.pdf).
 
 #License
 View [license](https://github.com/HewlettPackard/codar-ce/blob/master/LICENSE) information for the software contained in this repo.
