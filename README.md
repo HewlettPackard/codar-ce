@@ -145,7 +145,7 @@ Important Note : Please change the password after HPE Codar CE & HP OO CE are up
 
 	/usr/local/hp/codar/Tools/CSLContentInstaller/silent_install.xml. 
 
-	For Codar, please use silent_install_codar.xml, incase if you have installed Codar license
+	For Codar please use silent_install_codar.xml incase if you have installed Codar license
 
 #Jenkins Docker custom container configuration  
  Use  “docker-compose.yml.jenkins” (remove .jenkins extension) to download Jenkins pre-configured with PetClinic sample app. 

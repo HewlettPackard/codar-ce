@@ -139,9 +139,9 @@ Important Note : Please change the password after HPE Codar CE & HP OO CE are up
 
 • Any capsule content upload which is new can be done within Docker HPE Codar CE container and no extra configurations are required. The content zip file location should be mentioned in the
 
-	/usr/local/hp/codar/Tools/CSLContentInstaller/silent_install.xml. 
+	/usr/local/hp/csa/Tools/CSLContentInstaller/silent_install.xml. 
 
-	For HPE Codar CE, please use silent_install_codar.xml, incase if you have installed Codar license
+	For HPE Codar CE please use silent_install_codar.xml incase if you have installed Codar license
 
 #Jenkins Docker custom container configuration  
  Use  “docker-compose.yml.jenkins” (remove .jenkins extension) to download Jenkins pre-configured with PetClinic sample app. 
