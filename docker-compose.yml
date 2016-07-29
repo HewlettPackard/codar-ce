@@ -14,7 +14,7 @@ services:
    environment:
     - dockerclient_hostname=vmhostname
     - dockerclient_ipaddress=vmipaddress
-    volumes:
+   volumes:
     - /src/share:/share
    ports:
     - "18445:8443"
