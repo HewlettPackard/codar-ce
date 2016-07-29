@@ -1,26 +1,23 @@
 ####################################################################################################
-#	Author : Alex Dominic Savio								                                       #
-#	Organization : Hewlett-Packard Enterprise						   							   #
-#	Email : alex.william@hpe.com								   								   #
-#												                                                   #
-# Purpose:											                                               #
+#	Author : Alex Dominic Savio								   #
+#	Organization : Hewlett-Packard Enterprise						   #
+#	Email : alex.william@hpe.com								   #
+#												   #
+# Purpose:											   #
 # This script gets the hostname and ipaddress as input through command line option.                #
-# It automatically invokes the docker-compose up -d command to download				               #
-# and spawn the HPE Codar CE  containers.							                               #
+# It automatically invokes the docker-compose up -d command to download				   #
+# and spawn the HPE Codar CE  containers.							   #
 ####################################################################################################
 
 #!/bin/bash
 
 hostname=$1
 ipaddress=$2
-proxyhost=$3
-proxyport=$4
 
 if [ "$1" = "" ]; then
    echo USAGE:
-   echo "sh buildEnv-dockercompose.sh <hostname> <ipaddress> [<proxy host> <proxy port>]"
-   echo "\nThis script gets the hostname and ipaddress as input through command line option.\nIt automatically invokes the docker-compose up command to download and spawn containers".
-   echo "\nProxy host and proxy port are optional"
+   echo "sh buildEnv-dockercompose.sh <hostname> <ipaddress>"
+   echo "\nThis script gets the hostname and ipaddress as input through command line option.\nIt automatically invokes the docker-compose up command to download and spawn containers"
    hostname=`hostname`
    ipaddress=`ifconfig eth0 2>/dev/null|awk '/inet addr:/ {print $2}'|sed 's/addr://'`
    echo "Possible value hostname = $hostname and ipaddress = $ipaddress"
@@ -30,7 +27,7 @@ fi
 if [  -z "$hostname" -a "$hostname"=" " ]; then
 echo "Please pass hostname as command line input"
 echo USAGE:
-echo "sh buildEnv-dockercompose.sh <hostname> <ipaddress> [<proxy host> <proxy port>]"
+echo "sh buildEnv-dockercompose.sh <hostname> <ipaddress>"
 
 exit
 fi
@@ -38,7 +35,7 @@ fi
 if [  -z "$ipaddress" -a "$ipaddress"=" " ]; then
 echo "Please pass ipaddress as command line input"
 echo USAGE:
-echo "sh buildEnv-dockercompose.sh <hostname> <ipaddress> [<proxy host> <proxy port>]"
+echo "sh buildEnv-dockercompose.sh <hostname> <ipaddress>"
 exit
 fi
 
@@ -55,16 +52,17 @@ echo "The hostname is  $hostname"
 echo "The ipaddress is $ipaddress"
 
 if [ ! -z "$hostname" ] && [ "$hostname"!=" " ] && [ ! -z "$ipaddress" ] && [ "$ipaddress"!=" " ]; then
+
 echo "Download docker-compose.yml file"
-wget https://github.com/HewlettPackard/codar-ce/raw/master/docker-compose.yml --no-check-certificate
+wget https://github.com/HewlettPackard/codar-ce/raw/master/docker-compose.yml  --no-check-certificate
 echo "Changing the  hostname and ipaddress in the yml file"
-sed -i -e "s/vmhostname/${hostname}/" -e "s/vmipaddress/${ipaddress}/" -e "s/proxyhost/${proxyhost}/" -e "s/proxyport/${proxyport}/"  docker-compose.yml
+sed -i -e "s/vmhostname/${hostname}/" -e "s/vmipaddress/${ipaddress}/" docker-compose.yml
 echo "Starting to download all the required images and the containers will be created in the backgroud. This may take sevaral minutes."
 mkdir -p /src/share
 docker-compose up -d
 
 echo "Please note the below URLs for your reference"
-echo "HPE Codar CE Management Console - https://$ipaddress:18444/csa"
-echo "HPE Operations Orchestration Central CE - https://$ipaddress:18445/oo"
+echo "Codar Console - https://$ipaddress:18444/csa"
+echo "Operations Orchestration Central - https://$ipaddress:18445/oo"
 
 fi

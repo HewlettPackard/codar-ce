@@ -1,0 +1,8 @@
+jenkins:
+  image: hpsoftware/useitwithcsacodar:jenkins
+  volumes:
+    - "/src/share:/share"
+  ports:
+    - "18080:8080"
+    - "18081:80"
+  command: "/bin/bash -c \" /tmp/startService.sh;tail -f /dev/null\""

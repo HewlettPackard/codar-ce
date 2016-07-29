@@ -2,7 +2,7 @@
 
 This repo contains **scripts** to stand up **HPE Codar Community Edition (HPE Codar CE) on Docker containers**. 
 
-HPE Codar CE contains components such as **Core Codar** running in a JBoss container, **HPE Operation Orchestration Community Edition (HP OO CE) Central Server** running on a Tomcat server and Codar, HP OO and IDM **databases** created using PostgreSQL Server. 
+HPE Codar CE contains components such as **Core Codar** running in a JBoss container, **HPE Operation Orchestration Community Edition (HPE OO CE) Central Server** running on a Tomcat server and HPE Codar and IDM **databases** created using PostgreSQL Server. 
 
 All these **three components** will be made available on **three Docker containers** and yet connected to each other to form a single portal service.
 
@@ -13,18 +13,22 @@ This community edition of Codar helps the community users to automate deployment
 
 •	Automation includes **infrastructure** provisioning, **platform software** installation or configuration, **deployment of application** on complex environment like load balancer etc. 
 
-•	Automate the end-to-end steps of your applications deployment by integrating with various **resource providers** like **VMWare vCenter, AWS, OpenStack, Docker etc. and import the intelligence from HP OO, Chef,		Puppet and HP SA** etc. to install or configure software and deploy application. 
+•	Automate the end-to-end steps of your applications deployment by integrating with various **resource providers** like **VMWare vCenter, AWS, OpenStack, Docker, etc. and import the intelligence from HP OO, Chef,		Puppet and HP SA** etc. to install or configure software and deploy application. 
 
-•	Allows to create **blueprints/designs** using **rich graphical designer (drag & drop)**, trigger deployments using native UI or auto-deploy using **CI tool like Jenkins, Bamboo** etc. which helps for **Continuous		Deployment**.
+•	Allows to create **blueprints/designs** using **rich graphical designer (drag & drop)**, trigger deployments using native UI or auto-deploy using **CI tool like Jenkins, TFS, Bamboo** etc. which helps for **Continuous		Deployment**.
+
+•	Release pipeline automation help you to configure gate actions to execute operations like test suite execution using native ALM integration or suite created using third party testing tool, approval and any third party
+	software operation invocation.
+
 
 
 #Advantages you get when using HPE Codar CE
 
 •	**Ease of automation**. Supports HPE OO CE which is  the native automation tool which helps the end user to automate any complex steps. It contains 6000+ pre-created automated operations and workflows which can be		leveraged to automate the installation of software and deployment application from day1. 
 
-•	**Integration with third party products** like **vCenter, AWS, OpenStack, Docker, Chef, Puppet and Mesosphere** etc. SDK to integrate with home grown products or any third party products
+•	**Integration with third party products** like **vCenter, AWS, OpenStack, Docker Engine, Docker UCP, Docker Cloud, Chef, Puppet and Mesosphere** etc. SDK to integrate with home grown products or any third party products
 
-•	**20+ integration with HP Software products like HPE Sitescope, HPE Application Lifecycle Management HPE Helion Development Platform, HPE Stackato, HPE Oneview etc.**
+•	**20+ integration with HP Software products like HPE Sitescope, HPE Application Lifecycle Management, HPE Stackato, HPE Oneview etc.**
 
 •	Build **Cloud Agnostic blueprints** to deploy the application across different cloud vendor
 
@@ -38,23 +42,24 @@ This community edition of Codar helps the community users to automate deployment
 
 •	Heavy lifting is already done by the proven software **HP OO which acts as a central engine**
 
-•	**Authentication & Authorization** supports CAC, SSO, LDAP etc.
+•	**Authentication & Authorization** supports CAC, SSO, LDAP, SAML etc.
 
 •	**RBAC** support
 
 
 
 #HPE Codar CE trial license limitations
-1.	30 days of trial period with unlimited deployment on any number of OSI
-2.	Post trail period only 5 OSI can be used
+1.	Trial period of 30 days with unlimited deployment for any number of OSI.
+2.	After expiry of trial period upto 5 OSI will be  available if collection of product usage data by HPE is not selected during product activation.
+3.	Upto 25 OSI will be available if collection of product usage data by HPE is selected during product activation.
 
-#Codar version supported
+#Codar version 
 ```
-Codar 1.60 with Patch 1
+Codar 1.70
 ```
 
-#Prerequisites 
-1.	Set up Docker client with “docker-compose” as given in this  Docker site. [Reference Site](https://docs.docker.com/engine/installation/linux/ubuntulinux/)
+# Prerequisites 
+1.	Set up Docker client with “docker-compose” latest version as given in this  Docker site. [Reference Site : Install Docker Engine](https://docs.docker.com/engine/installation/linux/ubuntulinux/) [Reference Site : Install Docker Compose] (https://docs.docker.com/compose/install/)
 2.	OS & System Requirements for Docker Client/Workstation
 ```
 OS  : Ubuntu 12.x and above
@@ -63,26 +68,24 @@ RAM : 8GB
 CPU : 4
 ```
 
-#Instructions to stand up HPE Codar CE 1.60
+# Instructions to launch HPE Codar CE 1.70
 
 ```
+1.	Commands to execute:
+(If you are not creating a folder under /tmp, please make sure there is no docker-compose.yml exists in the directory before you execute the curl command to stand up HPE Codar CE"
 
-1.	Login to the registry docker.io with your username, password and email 
-	Command to execute: docker login docker.io
-
-2.	Command to execute:
-(If you are not creating a folder under /tmp, please make sure there is no docker-compose.yml exists in the directory before you execute the curl command to stand up CSA/Codar"
-
-	•	mkdir /tmp/codar
-	•	cd /tmp/codar 
-	•	curl -k -L https://github.com/HewlettPackard/codar-ce/raw/master/buildEnv-dockercompose.sh | bash /dev/stdin <hostname> <ipaddress>
+	•	mkdir /tmp/codar-ce
+	•	cd /tmp/codar-ce 
+	•	curl -k -L https://github.com/HewlettPackard/codar-ce/raw/master/buildEnv-dockercompose.sh | bash /dev/stdin <hostname> <ipaddress> [<proxyhost>] [<proxyport>]
  
   Please replace the arguments as per the below instruction,
   <hostname> is the Docker workstation/client hostname
   <ipaddress> is the Docker workstation/client ipaddress
+  <proxyhost> optional proxy host
+  <proxyport> optional proxy port
 
   For example, the Curl command should be as below. The hostname and ipaddress are sample
-  curl -k -L https://github.com/HewlettPackard/codar-ce/raw/master/buildEnv-dockercompose.sh | bash /dev/stdin mydockerclient.mydomain.com 10.1.1.12
+  curl -k -L https://github.com/HewlettPackard/codar-ce/raw/master/buildEnv-dockercompose.sh | bash /dev/stdin mydockerclient.mydomain.com 10.1.1.12 web-proxy.mydomain.com 8080
 
   Please always stop or start the containers using below commands,
   To stop: docker-compose stop
@@ -90,45 +93,51 @@ CPU : 4
   (Kindly note that docker-compose start is currently not supported)
 ```
 
-#Codar Endpoints
-Please find the exposed ports from which you can access various portals of Codar
+# HPE Codar CE Endpoints
+Please find the exposed ports from which you can access various portals of HPE Codar CE
 ```
-	Codar Management Console - https://<dockerworkstaions_ip>:18444/csa
+	HPE Codar CE Management Console - https://<dockerworkstations_ip>:18444/csa
 
-	Default Credentials 	
+	Credentials 	
 	Username: admin
 	Password: cloud
-
-	Operations Orchestration Central - https://<dockerworkstaions_ip>:18445/oo
 	
-	Default Credentials 
+	Operations Orchestration Central - https://<dockerworkstations_ip>:18445/oo
+	
+	Credentials 
 	Username: admin
 	Password: cloud	
 ```
 Important Note : Please change the password after HPE Codar CE & HP OO CE are up and running
 
 #Documents
-1.	[Concepts Guide](https://github.com/HewlettPackard/codar-ce/raw/master/Docs/Codar_1.6_ConceptsGuide.pdf)
-2.	[Help Guide](https://github.com/HewlettPackard/codar-ce/raw/master/Docs/Codar_160_Help.pdf)
-3.	[Configuration Guide](https://github.com/HewlettPackard/codar-ce/raw/master/Docs/Codar_160_ConfigurationGuide.pdf)
-4.	[API Reference Guide](https://github.com/HewlettPackard/codar-ce/raw/master/Docs/Codar_160_API_ReferenceGuide.pdf)
-5.	[QuickStart Guide](https://github.com/HewlettPackard/codar-ce/raw/master/Docs/Codar_1.6_QuickStartGuide.pdf)
-6.	[3rd Party License Guide](https://github.com/HewlettPackard/codar-ce/raw/master/Docs/Codar_160_OS-3rdPty-License.pdf)
+
+1.	[Concepts Guide](https://github.com/HewlettPackard/codar-ce/raw/master/Docs/Codar_1.70_Concepts_Guide.pdf)
+
+2.	[Help Guide](https://github.com/HewlettPackard/codar-ce/raw/master/Docs/Codar_1.70_Online_Help.pdf)
+
+3.	[Configuration Guide](https://github.com/HewlettPackard/codar-ce/raw/master/Docs/Codar_1.70_Configuration_Guide.pdf)
+
+4.	[API Reference Guide](https://github.com/HewlettPackard/codar-ce/raw/master/Docs/Codar_1.70_API_Reference_Guide)
+
+5.	[QuickStart Guide](https://github.com/HewlettPackard/codar-ce/raw/master/Docs/Codar_1.70_Quick_Start_Guide.pdf)
+
+6.	[3rd Party License Guide](https://github.com/HewlettPackard/codar-ce/raw/master/Docs/Codar_1.70_OS_3rdPty_Licenses.pdf)
 
 
 #Important notes
 
 • Please read through the Codar install and configure guide for post installation steps. 
 
-  Important for Jenking-Codar integration
+  Important for Jenking-HPE Codar CE integration
 
-	1. Launch  HP OO Central portal (https://<dockerworkstaions_ip>:18445/oo)   --> content Management  -->  System Accounts --> CODAR_REST_CREDENTIALS --> provide “admin” as username and “cloud” password
+	1. Launch  HPE OO CE Central portal https://<dockerworkstaions_ip>:18445/oo   --> content Management  -->  System Accounts --> CODAR_REST_CREDENTIALS --> provide “admin” as username and “cloud” password
 
-	2. Go to HP OO (https://<dockerworkstaions_ip>:18445/oo) --> content Management  --> System Properties --> CODAR_REST_API --> Replace localhost:8444 with  “<<Dockerhost>>:18444” value  
+	2. Go to HPE OO CE https://<dockerworkstaions_ip>:18445/oo --> content Management  --> System Properties --> CODAR_REST_API --> Replace localhost:8444 with  “<<Dockerhost>>:18444” value  
 
-• HPSSO/LWSSO is not enabled. Please refer the help guide to configure HPSSO/LWSSO. Please note that, "ipaddress" is used to configure CSA/Codar
+• HPSSO/LWSSO is not enabled. Please refer the help guide to configure HPSSO/LWSSO. Please note that, "ipaddress" is used to configure HPE Codar CE
 
-• Codar & OO are connected by Docker client machine IP with external port
+• HPE Codar CE & HPE OO CE are connected by Docker client machine IP with external port
 
 • The scripts which helps for configuring the Codar will be available at the /tmp location of all the containers (please reach out to us for any enhancement on these scripts).
 
@@ -160,7 +169,7 @@ To check out the SVN repo and you can use the same checked out directory to chec
 
 
 #Known Issues
-For product known issues, please refer Codar 1.60 Release Notes [here](https://github.com/HewlettPackard/codar-ce/raw/master/Docs/Codar_160_ReleaseNotes.pdf).
+For product known issues, please refer Codar 1.60 Release Notes [here](https://github.com/HewlettPackard/codar-ce/raw/master/Docs/Codar_1.70_Release_Notes.pdf).
 
 #License
 View [license](https://github.com/HewlettPackard/codar-ce/blob/master/LICENSE) information for the software contained in this repo.
