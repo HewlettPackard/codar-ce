@@ -111,6 +111,7 @@ Please find the exposed ports from which you can access various portals of HPE C
 Important Note : Please change the password after HPE Codar CE & HP OO CE are up and running
 
 #Documents
+The following documentation from the Codar 1.70 full release version is available for your reference:
 
 1.	[Concepts Guide](https://github.com/HewlettPackard/codar-ce/raw/master/Docs/Codar_1.70_Concepts_Guide.pdf)
 
