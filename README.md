@@ -68,6 +68,19 @@ RAM : 8GB
 CPU : 4
 ```
 
+```
+Please do not pull the Codar image directly as it will not stand up the complete Codar product.
+
+This Codar CE image has dependency  over other images hosted in “useitwithcsacodar” repository for example PostgreSQL database and HPE Operations Orchestration CE.
+
+Also the Codar CE image tag “latest” currently refers to Codar 1.6. By August 05 2016  tag “latest” of Codar CE will point to Codar 1.7 image.
+
+Follow the instructions given in the “Instructions to launch HPE Codar CE 1.70 “ below in order to smoothly stand up Codar 1.7 product. 
+
+You can also refer the “docker-compose.yml” file hosted in the “GitHub” to stand up the product. 
+```
+
+
 # Instructions to launch HPE Codar CE 1.70
 
 ```
