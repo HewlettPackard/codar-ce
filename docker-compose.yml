@@ -19,7 +19,7 @@ services:
    ports:
     - "18445:8443"
   codar:
-   image: hpsoftware/codar:codar17
+   image: hpsoftware/codar:latest
    container_name: codar
    environment:
     - dockerclient_hostname=vmhostname

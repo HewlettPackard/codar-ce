@@ -73,8 +73,6 @@ Please do not pull the "codar" image directly as it will not stand up the comple
 
 The "codar" image has dependency  over other images hosted in “useitwithcsacodar” repository for example PostgreSQL database and HPE Operations Orchestration CE.
 
-Also the "codar" image tag “latest” currently refers to HPE Codar 1.60. By August 05 2016  tag “latest” of "codar" will point to HPE Codar 1.70 image.
-
 Follow the instructions given in the “Instructions to launch HPE Codar CE 1.70 “ below in order to smoothly stand up HPE Codar 1.70 product. 
 
 You can also refer the “docker-compose.yml” file hosted in the “GitHub” to stand up the product. 
