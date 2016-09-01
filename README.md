@@ -168,14 +168,28 @@ The following documentation from the Codar 1.70 full release version is availabl
 
 	1. Please modify the proxy information from /opt/apache-maven-2.2.1/conf/settings.xml inside the Jenkins Docker container and update proxy under Jenkins --> Manage Plugins --> Advanced --> Proxy Configuration
 
-	2. Codar “cacerts” will be available once the Codar Docker containers are up and running. After you trigger the docker-compose.yml.jenkins (remove .jenkins extension) “cacerts” will be copied to “/share/cacerts” 
-	using Docker volume
+	2. Codar “cacerts” will be available once the Codar Docker containers are up and running. Go in to Codar container and copy "cacerts" from Codar container from the location "/usr/local/hpe/codar/openjre/lib/security/cacerts" to /share
 
-	3. You can configure this cacerts location in the Jenkins-Codar plugin
+		# docker exec -it codar /bin/bash
+		Inside the container run the below command
+		# cd /usr/local/hpe/codar/openjre/lib/security/
+		# cp /usr/local/hpe/codar/openjre/lib/security/cacerts /share
+		# exit
+		Exit from the container
 
-	4. Go to Manage Jenkins Configure System Jenkins URL http://<<DOCKERHOST>>:18080/ and update the Docker host URL
+	3. Go in to Jenkins container and copy /share/cacerts to /tmp/cacerts location
 
-	5. For any Jenkins error, please check /var/log/Jenkins/ jenkins.log
+		#  docker exec -it <jenkins container id> /bin/bash
+		Inside the container run the below command
+		# cp /share/cacerts /tmp/cacerts
+		# exit
+		Exit from the container
+
+	4. You need configure this cacerts location in the Jenkins-Codar plugin, so please take a note of this cacerts location present in Jenkins container which is /tmp/cacerts
+
+	5. Go to Manage Jenkins Configure System Jenkins URL http://<<DOCKERHOST>>:18080/ and update the Docker host URL
+
+	6. For any Jenkins error, please check /var/log/Jenkins/ jenkins.log
 
 # SVN Info
 To check out the SVN repo and you can use the same checked out directory to check-in designs. There is a “designs” folder which exists within this folder.
