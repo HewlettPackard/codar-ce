@@ -140,6 +140,8 @@ The following documentation from the Codar 1.70 full release version is availabl
 
 6.	[3rd Party License Guide](https://github.com/HewlettPackard/codar-ce/raw/master/Docs/Codar_1.70_OS_3rdPty_Licenses.pdf)
 
+7.	[Jenkins-ALM Configuration Guide] (https://github.com/HewlettPackard/codar-ce/raw/master/Docs/Codar_Jenkins_ALM-1.7.pdf)
+
 
 #Important notes
 
@@ -190,6 +192,8 @@ The following documentation from the Codar 1.70 full release version is availabl
 	5. Go to Manage Jenkins Configure System Jenkins URL http://<<DOCKERHOST>>:18080/ and update the Docker host URL
 
 	6. For any Jenkins error, please check /var/log/Jenkins/ jenkins.log
+
+	7. Refer the [Jenkins-ALM Configuration Guide] (https://github.com/HewlettPackard/codar-ce/raw/master/Docs/Codar_Jenkins_ALM-1.7.pdf) to integrate Jenkins with Codar
 
 # SVN Info
 To check out the SVN repo and you can use the same checked out directory to check-in designs. There is a “designs” folder which exists within this folder.
