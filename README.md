@@ -204,7 +204,7 @@ To check out the SVN repo and you can use the same checked out directory to chec
 	PASSWORD  : admin
 
 
-#Known Issues
+#Known issues
 For product known issues, please refer Codar 1.70 Release Notes [here](https://github.com/HewlettPackard/codar-ce/raw/master/Docs/Codar_1.70_Release_Notes.pdf).
 
 #License
