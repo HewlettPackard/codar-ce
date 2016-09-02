@@ -82,7 +82,7 @@ You can also refer the “docker-compose.yml” file hosted in the “GitHub” to stand
 # Instructions to launch HPE Codar CE 1.70
 
 ```
-1.	Commands to execute:
+Commands to execute:
 (If you are not creating a folder under /tmp, please make sure there is no docker-compose.yml exists in the directory before you execute the curl command to stand up HPE Codar CE"
 
 	•	mkdir /tmp/codar-ce
@@ -108,7 +108,7 @@ You can also refer the “docker-compose.yml” file hosted in the “GitHub” to stand
   (Kindly note that docker-compose start is currently not supported)
 ```
 
-# HPE Codar CE Endpoints
+# HPE Codar CE endpoints
 Please find the exposed ports from which you can access various portals of HPE Codar CE
 ```
 	HPE Codar CE Management Console - https://<dockerworkstations_ip>:18444/csa
@@ -195,7 +195,7 @@ The following documentation from the Codar 1.70 full release version is availabl
 
  Refer the [Jenkins-ALM Configuration Guide] (https://github.com/HewlettPackard/codar-ce/raw/master/Docs/Codar_Jenkins_ALM-1.7.pdf) to integrate Jenkins with Codar
 
-# SVN Info
+# SVN info
 To check out the SVN repo and you can use the same checked out directory to check-in designs. There is a “designs” folder which exists within this folder.
 	http://<<DOCKERHOST:18081>>/svn/petclinic/branches/petclinic-sourcecode-1.60.0000 
 
