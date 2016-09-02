@@ -191,7 +191,7 @@ The following documentation from the Codar 1.70 full release version is availabl
 
 	5. Go to Manage Jenkins Configure System Jenkins URL http://<<DOCKERHOST>>:18080/ and update the Docker host URL
 
-	6. For any Jenkins error, please check /var/log/Jenkins/ jenkins.log
+	6. For any Jenkins error, please check /var/log/jenkins/jenkins.log
 
  Refer the [Jenkins-ALM Configuration Guide] (https://github.com/HewlettPackard/codar-ce/raw/master/Docs/Codar_Jenkins_ALM-1.7.pdf) to integrate Jenkins with Codar
 
